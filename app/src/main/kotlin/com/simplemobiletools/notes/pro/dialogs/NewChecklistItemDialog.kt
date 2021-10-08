@@ -26,6 +26,7 @@ class NewChecklistItemDialog(val activity: Activity, callback: (titles: ArrayLis
         view.add_item.setOnClickListener {
             addNewEditText()
         }
+
         AlertDialog.Builder(activity)
             .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.cancel, null)
@@ -56,6 +57,7 @@ class NewChecklistItemDialog(val activity: Activity, callback: (titles: ArrayLis
                     false
                 }
             }
+
             titles.add(title_edit_text)
             view.checklist_holder.addView(this)
             activity.updateTextColors(view.checklist_holder)
